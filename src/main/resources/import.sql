@@ -1,0 +1,2 @@
+INSERT INTO db_pizzeria_experis.pizzas (description, image, name, price) VALUES('pizza alle olive', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi33D1miY2Chid2uyluVai6ump0cjXR5KbX8l0V9xNJA&s', 'pizza olive', 10.5);
+INSERT INTO db_pizzeria_experis.pizzas (description, image, name, price) VALUES('pizza classica senza niente', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1DpyNFHhc1ULvK1iH8d7CnFnqFVQgpsbFcqZJ5i5E8A&s', 'pizza margherita', 7.5);
