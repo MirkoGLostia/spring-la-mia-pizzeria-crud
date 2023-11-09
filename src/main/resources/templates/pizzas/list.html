@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
     <title>pizza</title>
 </head>
 <body>
@@ -16,7 +17,12 @@
 
 <ul th:if="${pizzaList.size() > 0}">
     <li th:each="pizza : ${pizzaList}">
-        <sp th:text="${pizza.getName()}"></sp>
+        <h3 th:text="${pizza.getName()}"></h3>
+        <br>
+        <img th:src="${pizza.getImage()}" alt="">
+        <p th:text="${pizza.getDescription()}"></p>
+        <span>[['prezzo: ' + ${pizza.getPrice()} + ' €']]</span>
+
     </li>
 </ul>
 
