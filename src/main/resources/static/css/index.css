@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+header {
+    padding: 10px;
+
+    background-color: aqua;
+
+}
+
+header a {
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 3px;
+
+    background-color: rgb(190, 176, 176);
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
 
 h1 {
     margin: 20px auto;
