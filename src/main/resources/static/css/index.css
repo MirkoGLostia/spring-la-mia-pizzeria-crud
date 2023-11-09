@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 
-header {
+nav {
     padding: 10px;
 
     background-color: aqua;
 
 }
 
-header a {
+nav a {
     border: 2px black solid;
     border-radius: 5px;
     padding: 3px;
