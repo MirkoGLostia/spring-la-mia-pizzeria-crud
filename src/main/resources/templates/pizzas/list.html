@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>pizza</title>
+</head>
+<body>
+
+<h1>Pizza list</h1>
+
+<div th:unless="${pizzaList.size() > 0}">
+    <p>
+        There are no pizza's in the menu
+    </p>
+</div>
+
+<ul th:if="${pizzaList.size() > 0}">
+    <li th:each="pizza : ${pizzaList}">
+        <sp th:text="${pizza.getName()}"></sp>
+    </li>
+</ul>
+
+</body>
+</html>
