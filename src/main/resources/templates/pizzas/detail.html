@@ -8,13 +8,14 @@
 <nav th:replace="fragments/navFragment :: navFragment"></nav>
 
 <h1>details</h1>
-<form th:replace="fragments/searchFragment :: searchFragment"></form>
+<section th:replace="fragments/searchFragment :: searchFragment"></section>
 
-<div>
-    <h3 th:text="${pizza.name}"></h3>
+<div class="detail-pizza-container">
     <img th:src="${pizza.image}" alt="immagine pizza">
-    <p th:text="${pizza.description}"></p>
-    <span th:text="${pizza.price}"></span>
+    <h3 th:text="${'Prodotto: ' + pizza.name}"></h3>
+    <p>Descrizione: <br> [[${pizza.description}]]</p>
+    <br>
+    <span th:text="${'prezzo: ' + pizza.price + ' €'}"></span>
 </div>
 
 </body>

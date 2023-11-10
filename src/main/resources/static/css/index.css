@@ -1,7 +1,14 @@
+/* general */
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
 }
 
 nav {
@@ -50,4 +57,33 @@ ul p {
 
 li {
     padding: 10px;
+}
+
+
+
+/* pizza menu */
+
+.search-bar {
+    padding: 20px;
+    font-size: 30px;
+}
+
+.search-bar form {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+
+
+
+/* pizza detail */
+
+.detail-pizza-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.detail-pizza-container img {
+    width: 500px;
+    margin-bottom: 10px;
 }
