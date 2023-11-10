@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" th:href="@{/css/index.css}">
-    <title>pizza</title>
+    <th:block th:insert="fragments/headFragment :: headFragment('pizza menu')"></th:block>
 </head>
 <body>
 
-<nav>
-    <div>
-        <a th:href="@{/pizza-list}">
-            pizza list
-        </a>
-
-    </div>
-</nav>
+<nav th:replace="fragments/navFragment :: navFragment"></nav>
 
 <h1>Pizza list</h1>
+<form th:replace="fragments/searchFragment :: searchFragment"></form>
 
 <div th:unless="${pizzaList.size() > 0}">
     <p>
