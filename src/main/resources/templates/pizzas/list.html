@@ -31,6 +31,7 @@
         <img th:src="${pizza.getImage()}" alt="">
         <p th:text="${pizza.getDescription()}"></p>
         <span>[['prezzo: ' + ${pizza.getPrice()} + ' €']]</span>
+        <a th:href="@{/pizza-list/detail/{id}(id=${pizza.getId()})}">details</a>
 
     </li>
 </ul>

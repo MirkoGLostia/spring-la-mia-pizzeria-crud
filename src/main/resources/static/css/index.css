@@ -11,7 +11,7 @@ nav {
 
 }
 
-nav a {
+a {
     border: 2px black solid;
     border-radius: 5px;
     padding: 3px;
