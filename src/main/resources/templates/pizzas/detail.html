@@ -9,5 +9,12 @@
 
 <h1>details</h1>
 
+<div>
+    <h3 th:text="${pizza.name}"></h3>
+    <img th:src="${pizza.image}" alt="immagine pizza">
+    <p th:text="${pizza.description}"></p>
+    <span th:text="${pizza.price}"></span>
+</div>
+
 </body>
 </html>
