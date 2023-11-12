@@ -5,10 +5,7 @@
 </head>
 <body>
 
-<nav th:replace="fragments/navFragment :: navFragment"></nav>
-
-<h1>Pizza list</h1>
-<section th:replace="fragments/searchFragment :: searchFragment"></section>
+<header th:replace="fragments/macroPiece/header :: headerMacro('Pizza list')"></header>
 
 <div th:unless="${pizzaList.size() > 0}">
     <p>

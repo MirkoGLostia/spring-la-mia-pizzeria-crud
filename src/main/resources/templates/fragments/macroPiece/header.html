@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<header th:fragment="headerMacro(h1)">
+  <nav th:replace="fragments/navFragment :: navFragment"></nav>
+
+  <h1 th:text="${h1}"></h1>
+
+  <div th:replace="fragments/searchFragment :: searchFragment"></div>
+</header>
+
+</body>
+</html>

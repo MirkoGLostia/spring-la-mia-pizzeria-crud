@@ -5,10 +5,7 @@
 </head>
 <body>
 
-<nav th:replace="fragments/navFragment :: navFragment"></nav>
-
-<h1>details</h1>
-<section th:replace="fragments/searchFragment :: searchFragment"></section>
+<header th:replace="fragments/macroPiece/header :: headerMacro('DETAIL')"></header>
 
 <div class="detail-pizza-container">
     <img th:src="${pizza.image}" alt="immagine pizza">
