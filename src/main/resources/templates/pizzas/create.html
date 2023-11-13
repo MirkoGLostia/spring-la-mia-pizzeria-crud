@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="fragments/headFragment :: headFragment('pizza menu')"></th:block>
+</head>
+<body>
+
+<header th:replace="fragments/macroPiece/header :: headerMacro('CREATE', ${area})"></header>
+
+
+<form class="row gy-2" id="create-pizza" method="POST" th:action="@{/pizza/create}" th:object="${pizza}" >
+    <label th:for="name" class="form-label">Pizza name</label>
+    <input type="text" class="form-control" id="name" th:field="*{name}">
+
+
+    <div class="col-12">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a th:href="@{/}" class="btn btn-primary">Cancel</a>
+    </div>
+</form>
+
+</body>
+</html>

@@ -8,7 +8,8 @@
 
   <h1 th:text="${h1}"></h1>
 
-  <div th:replace="fragments/searchFragment :: searchFragment"></div>
+  <div th:if="${area == 'pizza-list'}" th:insert="fragments/searchFragment :: searchFragment"></div>
+
 </header>
 
 </body>
