@@ -2,8 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<header th:fragment="headerMacro(h1)">
-  <nav th:replace="fragments/navFragment :: navFragment"></nav>
+<header th:fragment="headerMacro(h1, area)">
+
+  <nav th:replace="fragments/navFragment :: navFragment(${area})"></nav>
 
   <h1 th:text="${h1}"></h1>
 

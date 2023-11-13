@@ -34,6 +34,9 @@ public class PizzaController {
             pizzaList = pizzaRepository.findAll();
         }
 
+        String areaName = "pizza-list";
+
+        model.addAttribute("area", areaName);
         model.addAttribute("pizzaList", pizzaList);
         return "pizzas/list";
     }
@@ -42,6 +45,8 @@ public class PizzaController {
     @GetMapping("pizza-list/detail/{id}")
     public String pizzaDetail(@PathVariable Integer id, Model model) {
         Optional<Pizza> result = pizzaRepository.findById(id);
+
+        model.addAttribute("area", "detail-pizza");
 
         if (result.isPresent()) {
             model.addAttribute("pizza", result.get());

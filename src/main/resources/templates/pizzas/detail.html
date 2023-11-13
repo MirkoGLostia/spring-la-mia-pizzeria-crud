@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<header th:replace="fragments/macroPiece/header :: headerMacro('DETAIL')"></header>
+<header th:replace="fragments/macroPiece/header :: headerMacro('DETAIL', ${area})"></header>
 
 <div class="detail-pizza-container">
     <img th:src="${pizza.image}" alt="immagine pizza">

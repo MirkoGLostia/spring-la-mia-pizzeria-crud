@@ -2,12 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<section class="search-bar" th:fragment="searchFragment">
-    <form th:action="@{/pizza-list}" method="GET">
-        <label for="searchpizza">search a pizza</label>
-        <input id="searchpizza" type="text"  th:placeholder="${param.search}" name="search">
-        <button type="submit">Search</button>
-    </form>
+<section th:fragment="searchFragment">
+    <div class="search-bar">
+        <form th:action="@{/pizza-list}" method="GET">
+            <div class="input-group">
+                <label class="p-2" for="searchpizza">search a pizza</label>
+                <input class="form-control" id="searchpizza" type="text"  th:placeholder="${param.search}" name="search">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
 </section>
 
 
