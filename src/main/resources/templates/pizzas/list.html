@@ -5,8 +5,8 @@
 </head>
 <body>
 
-
 <header th:replace="fragments/macroPiece/header :: headerMacro('Pizza list', ${area})"></header>
+
 
 <div th:unless="${pizzaList.size() > 0}">
     <p>

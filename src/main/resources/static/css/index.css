@@ -29,8 +29,12 @@ h1 {
 }
 
 .pizza-list h3 {
-    margin: 5px;
-    font-size: medium;
+     margin: 5px;
+     font-size: medium;
+ }
+
+.pizza-list img {
+    width: 500px;
 }
 
 .pizza-list p {
@@ -59,3 +63,16 @@ h1 {
     width: 500px;
     margin-bottom: 10px;
 }
+
+
+
+/* pizza creation */
+
+.creation-container {
+    padding: 10vw;
+}
+
+
+
+
+

@@ -31,9 +31,8 @@ public class PizzaController {
             pizzaList = pizzaRepository.findAll();
         }
 
-        String areaName = "pizza-list";
 
-        model.addAttribute("area", areaName);
+        model.addAttribute("area", "pizza-list");
         model.addAttribute("pizzaList", pizzaList);
         return "pizzas/list";
     }
@@ -56,13 +55,16 @@ public class PizzaController {
 
     @GetMapping("pizza/create")
     public String createPizza(Model model) {
+        model.addAttribute("area", "pizza-create");
         model.addAttribute("pizza", new Pizza());
         return "pizzas/create";
     }
 
     @PostMapping("pizza/create")
-    public String doCreatePizza(@ModelAttribute("pizza") Pizza formPizza) {
-        return "pizzas/create";
+    public String doCreatePizza(Model model, @ModelAttribute("pizza") Pizza formPizza) {
+        model.addAttribute("area", "pizza-create");
+        Pizza savedPizza = pizzaRepository.save(formPizza);
+        return "redirect:/pizza-list/detail/" + savedPizza.getId();
     }
 
 
