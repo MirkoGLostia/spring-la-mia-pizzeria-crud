@@ -7,6 +7,10 @@
 
 <header th:replace="fragments/macroPiece/header :: headerMacro('Pizza list', ${area})"></header>
 
+<div th:if="${message !=null}" class="alert alert-success alert-dismissible fade show">
+    <span th:text="${message}"></span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 
 <div th:unless="${pizzaList.size() > 0}">
     <p>
@@ -21,7 +25,15 @@
         <img th:src="${pizza.getImage()}" alt="">
         <p th:text="${pizza.getDescription()}"></p>
         <span>[['prezzo: ' + ${pizza.getPrice()} + ' €']]</span>
-        <a th:href="@{/pizza-list/detail/{id}(id=${pizza.getId()})}">details</a>
+        <div class="button-list-container">
+            <a class="btn btn-primary" th:href="@{/pizza-list/detail/{id}(id=${pizza.getId()})}"> details </a>
+            <a class="btn btn-primary" th:href="@{/pizza/edit/{id}(id=${pizza.getId()})}"> modify </a>
+            <form method="POST" th:action="@{/pizza/delete/{id}(id=${pizza.getId()})}"
+                  onsubmit="return confirm('Are you sure?')">
+                <button type="submit" class="btn btn-primary"> delete </button>
+            </form>
+        </div>
+
 
     </li>
 </ul>

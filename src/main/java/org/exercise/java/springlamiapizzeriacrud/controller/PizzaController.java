@@ -80,7 +80,6 @@ public class PizzaController {
             model.addAttribute("pizza", pizzaService.getPizzaById(id));
             return "pizzas/createEdit";
         } catch (PizzaNotFoundException e) {
-            // sollevo un'eccesione con HttpStatus 404
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }
     }
@@ -94,7 +93,7 @@ public class PizzaController {
         }
         try {
             Pizza editPizza = pizzaService.editPizza(formPizza);
-            return "redirect:/pizzas/detail" + editPizza.getId();
+            return "redirect:/pizza-list/detail/" + editPizza.getId();
         } catch (PizzaNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }
@@ -103,14 +102,14 @@ public class PizzaController {
 
 
 
-    @PostMapping("delete/{id}")
+    @PostMapping("pizza/delete/{id}")
     public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes) {
         try {
             Pizza pizzaToDelete = pizzaService.getPizzaById(id);
             pizzaService.deletePizza(id);
             redirectAttributes.addFlashAttribute("message",
                     "Pizza " + pizzaToDelete.getName() + " deleted!");
-            return "redirect:/";
+            return "redirect:/pizza-list";
         } catch (PizzaNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }

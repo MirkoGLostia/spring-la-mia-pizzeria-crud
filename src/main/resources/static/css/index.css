@@ -45,6 +45,12 @@ h1 {
     padding: 10px;
 }
 
+.button-list-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
 .search-bar {
     margin: 0 20%;
     margin-bottom: 10px;
