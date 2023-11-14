@@ -29,7 +29,7 @@ public class PizzaService {
         if (result.isPresent()) {
             return result.get();
         } else {
-            throw new PizzaNotFoundException("Book with id " + id + " not found");
+            throw new PizzaNotFoundException("Pizza with id " + id + " not found");
         }
     }
 
