@@ -23,7 +23,7 @@ public class Pizza {
     @Size(max = 255, message = "not so long, under 255 you must")
     private String image;
     @NotNull(message = "give a price or else it will be free")
-    @DecimalMin(value = "0.0", inclusive = false)
+    @DecimalMin(value = "0.01", inclusive = true)
     @Digits(integer=5, fraction = 2)
     private BigDecimal price;
 
